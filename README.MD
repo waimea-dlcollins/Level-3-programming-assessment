@@ -1,6 +1,6 @@
-# PROJECT NAME HERE
+# Dylan's maze 
 
-by YOUR NAME HERE
+by Dylan Collins
 
 ---
 

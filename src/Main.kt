@@ -2,7 +2,7 @@
  * =====================================================================
  * Programming Project for NCEA Level 3, Standard 91906
  * ---------------------------------------------------------------------
- * Project Name:   PROJECT NAME HERE
+ * Project Name:   Dylan's Maze
  * Project Author: Dylan Collins
  * GitHub Repo:    https://github.com/waimea-dlcollins/Level-3-programming-assessment#
  * ---------------------------------------------------------------------
