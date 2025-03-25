@@ -1,4 +1,4 @@
-/**
+/*
  * =====================================================================
  * Programming Project for NCEA Level 3, Standard 91906
  * ---------------------------------------------------------------------
@@ -8,6 +8,7 @@
  * ---------------------------------------------------------------------
  * Notes:
  * PROJECT NOTES HERE
+ * Creating maze
  * =====================================================================
  */
 
@@ -17,6 +18,7 @@ import com.formdev.flatlaf.FlatDarkLaf
 import java.awt.*
 import java.awt.event.*
 import javax.swing.*
+import java.awt.event.KeyEvent
 
 
 /**
@@ -35,18 +37,77 @@ fun main() {
  * stored, plus any application logic functions
  */
 class App() {
+
+
     // Constants defining any key values
-    val MAX_CLICKS = 10
+    var playerX = 1
+    var playerY = 1
+    val mazeWidth = 7
+    val mazeHeight = 8
 
-    // Data fields
-    var clicks = 0
 
-    // Application logic functions
-    fun updateClickCount() {
-        clicks++
-        if (clicks > MAX_CLICKS) clicks = MAX_CLICKS
+    val maze: List<List<Int>> = listOf(
+        listOf(1, 1, 1, 1),
+        listOf(1, 0, 0, 1),
+        listOf(0, 1, 1, 1),
+        listOf(1, 1, 1, 0),
+        listOf(1, 0, 1, 1),
+        listOf(1, 1, 0, 1),
+        listOf(0, 1, 1, 0),
+        listOf(1, 1, 1, 1),
+
+        )
+
+
+
+     val exitX = mazeWidth - 2
+     val exitY = mazeWidth - 2
+
+
+    fun isWalkable (x:Int, y:Int): Boolean {
+        return (x in 0 until mazeWidth && y in 0 until mazeHeight)
+
+
+
     }
+
+    fun movePlayer(dx: Int, dy: Int): Boolean {
+        val newX = playerX + dx
+        val newY = playerY + dy
+
+        if(isWalkable(newX, newY)) {
+            playerX = newX
+            playerY = newY
+
+            if (playerX == exitX && playerY == exitY) {
+                return true
+            }
+            return false
+        }
+
+        return true
+    }
+
+     fun keyPressed(e: KeyEvent) {
+        when (e.keyCode)
+        {
+            KeyEvent.VK_UP -> if (movePlayer(0, -1)) gameWon()
+            KeyEvent.VK_DOWN -> if (movePlayer(0, 1)) gameWon()
+            KeyEvent.VK_LEFT -> if (movePlayer(-1, 0)) gameWon()
+            KeyEvent.VK_RIGHT -> if (movePlayer(1, 0)) gameWon()
+
+        }
+
+    }
+    fun gameWon() {
+        JOptionPane.showMessageDialog(null, "You completed the maze.")
+    }
+
 }
+
+
+
+
 
 
 /**
@@ -56,9 +117,9 @@ class App() {
  */
 class MainWindow(val app: App) : JFrame(), ActionListener {
 
-    // Fields to hold the UI elements
-    private lateinit var clicksLabel: JLabel
-    private lateinit var clickButton: JButton
+
+    private lateinit var ClicksLabel: JLabel
+    private lateinit var mazePanel: JPanel
 
     /**
      * Configure the UI and display it
@@ -77,7 +138,7 @@ class MainWindow(val app: App) : JFrame(), ActionListener {
      * Configure the main window
      */
     private fun configureWindow() {
-        title = "Kotlin Swing GUI Demo"
+        title = "Dylans maze"
         contentPane.preferredSize = Dimension(600, 350)
         defaultCloseOperation = WindowConstants.EXIT_ON_CLOSE
         isResizable = false
@@ -92,17 +153,37 @@ class MainWindow(val app: App) : JFrame(), ActionListener {
     private fun addControls() {
         val baseFont = Font(Font.SANS_SERIF, Font.PLAIN, 36)
 
-        clicksLabel = JLabel("CLICK INFO HERE")
-        clicksLabel.horizontalAlignment = SwingConstants.CENTER
-        clicksLabel.bounds = Rectangle(50, 50, 500, 100)
-        clicksLabel.font = baseFont
-        add(clicksLabel)
+        val contentPanel = JPanel (BorderLayout()).apply{
+            bounds = Rectangle(0,0,600,350)
+        }
 
-        clickButton = JButton("Click Me!")
-        clickButton.bounds = Rectangle(50,200,500,100)
-        clickButton.font = baseFont
-        clickButton.addActionListener(this)     // Handle any clicks
-        add(clickButton)
+
+        ClicksLabel = JLabel("Dylan's maze").apply {
+            horizontalAlignment = SwingConstants.CENTER
+            bounds = Rectangle(50,10,300,30)
+            font = baseFont
+            add(this)
+        }
+
+         mazePanel = object :JPanel() {
+            override fun paintComponent(g: Graphics) {
+                g.color = Color.GREEN
+                g.fillRect(app.playerX * 100 + 50, app.playerY * 100 + 150, 50, 50)
+
+                g.color = Color.BLUE
+                g.fillRect(app.exitX * 100 + 50, app.exitY * 100 + 150, 50, 50)
+            }
+        }.apply{
+            bounds = Rectangle(50, 150, 500, 500)
+
+            isFocusable = true
+            addKeyListener(this@MainWindow)
+        }
+    add(mazePanel)
+    }
+
+    private fun addKeyListener(mainWindow: MainWindow) {
+
     }
 
 
@@ -111,29 +192,23 @@ class MainWindow(val app: App) : JFrame(), ActionListener {
      * of the application model
      */
     fun updateView() {
-        if (app.clicks == app.MAX_CLICKS) {
-            clicksLabel.text = "Max clicks reached!"
-            clickButton.isEnabled = false
+
         }
-        else {
-            clicksLabel.text = "You clicked ${app.clicks} times"
-            clickButton.isEnabled = true
-        }
+
+
     }
+
 
     /**
      * Handle any UI events (e.g. button clicks)
      * Usually this involves updating the application model
      * then refreshing the UI view
      */
-    override fun actionPerformed(e: ActionEvent?) {
-        when (e?.source) {
-            clickButton -> {
-                app.updateClickCount()
-                updateView()
-            }
-        }
-    }
+     fun actionPerformed(e: ActionEvent?) {
 
-}
+        }
+
+
+
+
 
