@@ -23,6 +23,8 @@ The project is written in the [Kotlin](https://kotlinlang.org) programming langu
 ---
 
 ## Project Description
-
-**PLACE YOUR PROJECT DESCRIPTION HERE**
+This maze game challenges players to find their way to the exit through a fixed layout maze.
+With simple and intuitive controls, players can navigate the maze at their own pace. 
+The game focuses on exploration and challenge, making it a relaxing yet engaging experience.
+****
 
