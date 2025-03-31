@@ -34,11 +34,13 @@ added of the private lateinit var's for the buttons for the maze game in the mai
 
 ---
 
-## Date: 28/3/20xx
+## Date: 31/3/2025
 
-Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes.
+added the function to update the view of the player every time the player makes a action (X and Y changes). Made the two for loops that constanly check the X and Y of the mazeHeight and MazeWidth. Then the if statement checks the X and Y of the player are colours it red. Also colors the finsih blue and then paints the walls (1) black and the path (0) white. cellPanel is the panel for the maze that displays everything and the dimensions are 50 for height and 50 for width. then  mazePanel.revalidate() updates the view for the maze and the         mazePanel.repaint() repaints the maze. then the last function takes care of the movement. I have 5 buttons 4 of them are for movement and the last is for the instructions, it checks for actions and when the buttons are clicked the when runs and moves the player to the position and then updates the view. the last button the instructions button uses a showMessageDialog to show a message in a mini pop up the message states, "use the buttons provided to complete the maze, get to the blue block to finish.". the "this" is used to to specify the parent component which in this case is the showMessageDialog.
 
-![example.png](screenshots/example.png)
+
+<img width="747" alt="Screenshot 2025-04-01 at 9 24 15 AM" src="https://github.com/user-attachments/assets/c4b9e6b3-000c-4efd-a6b2-e522efb551a5" />
+
 
 ---
 
