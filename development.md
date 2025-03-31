@@ -12,7 +12,7 @@ The development log captures key moments in your application development:
 
 ## Date: 25/3/2025
 
-Finished making the main function, added all of the necessary vars for the app function, and then also created a list for the maze which is the layout of the maze and the 0's are a space, and the 1's are a wall, also has the var for the seconds for the timer which starts at 0 and runs when the program opens.
+Finished making the main function, added all of the necessary vars and vals for the app function, and then also created a list for the maze which is the layout of the maze and the 0's are a space, and the 1's are a wall, also has the var for the seconds for the timer which starts at 0 and runs when the program opens.
 
  <img width="717" alt="Screenshot 2025-04-01 at 9 21 18 AM" src="https://github.com/user-attachments/assets/08596699-7b12-43ad-a561-406e8ecee7d5" />
 
