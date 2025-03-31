@@ -10,17 +10,17 @@ Terminology:
 
 ---
 
-## Example Test Name
+## Player X and Player Y 
 
-Example test description. Example test description. Example test description. Example test description. Example test description. Example test description.
+ Player X and Player Y start positions, when starting the program for the maze game.
 
-### Test Data To Use
+### Starting location
 
-Details of test data and reasons for selection. Details of test data and reasons for selection. Details of test data and reasons for selection.
+the test data for this is an integer in this case 0, 0 
 
 ### Expected Test Result
 
-Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen.
+my expected test result is that the location of 0, 0 which is in the top left of the maze will work and when the application is opened the player will spawn there and will start to when the game starts.
 
 ---
 
