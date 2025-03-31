@@ -22,19 +22,23 @@ the player "block" spawned in the top left of the whole map which is what i want
 
 ---
 
-## Example Test Name
+## Moveplayer X and Y
 
-Example test description. Example test description.Example test description. Example test description.Example test description. Example test description.
+the X and Y need to be changed to move the player around the maze, they need to be checked as well to make sure that the player moves in the right direction when the buttons are clicked.
 
-### Test Data Used
+## The X and Y (boolean)
 
-Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data.
+the test data is a boolean and i want to make sure that every time the player clicks a button that they move in the right direction that the player clicked, as its a boolean the function can either move the player (true) or not be able to move the player (false), the isWalkable function also is a boolean and helps with this.
 
 ### Test Result
 
-![example.png](screenshots/example.png)
+<img width="287" alt="Screenshot 2025-04-01 at 9 49 27 AM" src="https://github.com/user-attachments/assets/49196111-d601-44cf-ac31-b663f38a0266" />
+<img width="411" alt="Screenshot 2025-04-01 at 9 49 31 AM" src="https://github.com/user-attachments/assets/96eec593-b746-4dcd-aff4-b386cfda5f11" />
 
-Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result.
+
+
+The player (red block) moves when i click one of the buttons this shows that the movePlayer function and isWalkable function but work to the level that they need to.
+
 
 ---
 
