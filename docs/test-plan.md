@@ -24,17 +24,17 @@ my expected test result is that the location of 0, 0 which is in the top left of
 
 ---
 
-## Example Test Name
+Moveplayer X and Y
 
-Example test description. Example test description. Example test description. Example test description. Example test description. Example test description.
+the X and Y need to be changed to move the player around the maze, they need to be checked as well to make sure that the player moves in the right direction when the buttons are clicked.
 
-### Test Data To Use
+The X and Y (boolean)
 
-Details of test data and reasons for selection. Details of test data and reasons for selection. Details of test data and reasons for selection.
+the test data is a boolean and i want to make sure that every time the player clicks a button that they move in the right direction that the player clicked, as its a boolean the function can either move the player (true) or not be able to move the player (false), the isWalkable function also is a boolean and helps with this.
 
 ### Expected Test Result
 
-Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen.
+I am expecting the iswalkable funtion and the movePlayer function to identify if the player is able to move to the next space, it should either return a true or false, true meaning that the playe can move and the false meaning that the player cant move. The player could also not be able to move from things like there being a wall in the way.
 
 ---
 
