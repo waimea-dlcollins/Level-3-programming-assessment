@@ -78,7 +78,12 @@ class MainWindow(private val app: App) : JFrame(), ActionListener {
     private lateinit var leftButton: JButton
     private lateinit var rightButton: JButton
     private lateinit var timerLabel: JLabel
+
     private lateinit var gameTimer: Timer
+
+    private lateinit var currentPosition: JLabel
+
+
 
     init {
         configureWindow()
@@ -91,7 +96,7 @@ class MainWindow(private val app: App) : JFrame(), ActionListener {
 
     private fun configureWindow() {
         title = "Dylan's Maze"
-        contentPane.preferredSize = Dimension(400, 550)
+        contentPane.preferredSize = Dimension(400, 600)
         defaultCloseOperation = WindowConstants.EXIT_ON_CLOSE
         isResizable = false
         layout = BorderLayout()
@@ -107,11 +112,12 @@ class MainWindow(private val app: App) : JFrame(), ActionListener {
     }
 
     private fun addControls() {
-        val buttonFont = Font(Font.SANS_SERIF, Font.PLAIN, 40)
+        val buttonFont = Font(Font.SANS_SERIF, Font.BOLD, 40)
         val timerFont = Font(Font.SANS_SERIF, Font.BOLD, 20)
+        val currentPositionFont = Font(Font.SANS_SERIF, Font.BOLD, 20)
 
-        // Timer display
-        timerLabel = JLabel ("0 seconds",SwingConstants.CENTER)
+
+        timerLabel = JLabel ("0 seconds", SwingConstants.CENTER)
         timerLabel.font = timerFont
         add(timerLabel, BorderLayout.NORTH)
 
@@ -121,6 +127,19 @@ class MainWindow(private val app: App) : JFrame(), ActionListener {
 
         val controlPanel = JPanel()
         controlPanel.layout = FlowLayout()
+
+        //----------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------
+
+
+        currentPosition = JLabel("Position: (${app.playerX}, ${app.playerX})", SwingConstants.CENTER)
+        currentPosition.font = currentPositionFont
+        add(currentPosition, BorderLayout.NORTH)
+
+
+        //----------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------
+
 
         upButton = JButton("↑")
         upButton.font = buttonFont
@@ -180,6 +199,10 @@ class MainWindow(private val app: App) : JFrame(), ActionListener {
                 mazePanel.add(cellPanel)
             }
         }
+
+        currentPosition.text = "Position: (${app.playerX}, ${app.playerY}) "
+
+
         mazePanel.revalidate()
         mazePanel.repaint()
     }
