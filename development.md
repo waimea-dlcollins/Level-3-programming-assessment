@@ -1,4 +1,3 @@
-<img width="726" alt="Screenshot 2025-04-04 at 12 41 39 PM" src="https://github.com/user-attachments/assets/6015fdc2-5c20-4a77-83d7-d60a6510ac0f" /># Development Log
 
 The development log captures key moments in your application development:
 
