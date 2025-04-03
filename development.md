@@ -58,7 +58,8 @@ Added a current location Jlabel that shows the curren X and Y coordinates that y
 <img width="663" alt="Screenshot 2025-04-04 at 12 43 34 PM" src="https://github.com/user-attachments/assets/c5d7cb57-d17f-4303-a944-fe93611358fc" />
 <img width="444" alt="Screenshot 2025-04-04 at 12 43 41 PM" src="https://github.com/user-attachments/assets/6742be0d-14f3-4500-bbf1-2136c8e97e78" />
 <img width="280" alt="Screenshot 2025-04-04 at 12 43 51 PM" src="https://github.com/user-attachments/assets/421b81cb-c730-4833-9568-a3db293f5eb1" />
-![image](https://github.com/user-attachments/assets/a422840f-878f-4876-9c29-9880c36c3fb4)
+<img width="197" alt="Screenshot 2025-04-04 at 12 47 56 PM" src="https://github.com/user-attachments/assets/6f3d0dc4-a87e-43cf-8466-65af31cd49be" />
+
 
 
 
