@@ -70,9 +70,9 @@ Added a current location Jlabel that shows the curren X and Y coordinates that y
 
 Added the current location label in the top right of the screen by making a new val named headerPanel which is specifically for the header which is the timer and the current location. I made the SwingConstants.LEFT for the timer (current seconds) and i used SwingConstants.RIGHT for the current location (X and Y). Then i added both the timer and the current location to the headerPanel. The borderlayout for the headerPanel is NORTH.
 
-<img width="544" alt="Screenshot 2025-04-04 at 2 46 28 PM" src="https://github.com/user-attachments/assets/94d5b45a-33ef-4630-8b73-d3200642a95e" />
-<img width="211" alt="Screenshot 2025-04-04 at 2 48 13 PM" src="https://github.com/user-attachments/assets/d897fd98-d9bf-4ed7-98eb-dc3a69e03004" />
-<img width="347" alt="Screenshot 2025-04-04 at 2 48 05 PM" src="https://github.com/user-attachments/assets/bd6e6c97-7b93-4f8f-8fd9-02932d6f6abb" />
+<img width="581" alt="Screenshot 2025-04-04 at 3 00 02 PM" src="https://github.com/user-attachments/assets/4b507cc0-ad4d-460b-bb56-e9b28564067d" />
+
+<img width="463" alt="Screenshot 2025-04-04 at 3 03 17 PM" src="https://github.com/user-attachments/assets/d74641b9-3f91-4e76-9272-eb877e8767e7" />
 
 
 
