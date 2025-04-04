@@ -37,7 +37,7 @@ the test data is a boolean and i want to make sure that every time the player cl
 
 
 
-The player (red block) moves when i click one of the buttons this shows that the movePlayer function and isWalkable function but work to the level that they need to.
+The player (red block) moves when i click one of the buttons this shows that the movePlayer function and isWalkable function and work to the level that they need to.
 
 
 ---
