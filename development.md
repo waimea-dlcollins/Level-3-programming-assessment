@@ -70,9 +70,10 @@ Added a current location Jlabel that shows the curren X and Y coordinates that y
 
 Added the current location label in the top right of the screen using the borderLayout.North and same with the timer which is also on the top left of the screen using borderLayout.North and i was able to get the timer and current location on the left and right by using FlowLayout() and making the SwingConstants left and right respectively.
 
-<img width="487" alt="Screenshot 2025-04-04 at 2 13 03 PM" src="https://github.com/user-attachments/assets/8ee73b25-2c8f-4e2c-a727-d6846cc30e97" />
-<img width="196" alt="Screenshot 2025-04-04 at 2 44 30 PM" src="https://github.com/user-attachments/assets/6c83d2ed-d4cd-4338-b587-0f0a068bf7e2" />
+
 <img width="544" alt="Screenshot 2025-04-04 at 2 46 28 PM" src="https://github.com/user-attachments/assets/94d5b45a-33ef-4630-8b73-d3200642a95e" />
+<img width="211" alt="Screenshot 2025-04-04 at 2 48 13 PM" src="https://github.com/user-attachments/assets/d897fd98-d9bf-4ed7-98eb-dc3a69e03004" />
+<img width="347" alt="Screenshot 2025-04-04 at 2 48 05 PM" src="https://github.com/user-attachments/assets/bd6e6c97-7b93-4f8f-8fd9-02932d6f6abb" />
 
 
 
