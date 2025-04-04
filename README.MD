@@ -23,6 +23,6 @@ The project is written in the [Kotlin](https://kotlinlang.org) programming langu
 ---
 
 ## Project Description
-This maze game challenges the user to find their way through the maze while being timed throughout their journey.
+This maze game challenges the user to find their way through the maze while being timed throughout their journey whilst constantly showing the players exact location in X and Y coordinates.
 ****
 
