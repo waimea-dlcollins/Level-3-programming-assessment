@@ -73,6 +73,9 @@ Added the current location label in the top right of the screen using the border
 <img width="487" alt="Screenshot 2025-04-04 at 2 13 03 PM" src="https://github.com/user-attachments/assets/8ee73b25-2c8f-4e2c-a727-d6846cc30e97" />
 
 
+<img width="503" alt="Screenshot 2025-04-04 at 2 44 18 PM" src="https://github.com/user-attachments/assets/4095b53d-8e80-4e24-b456-e260a9ac12d5" />
+<img width="296" alt="Screenshot 2025-04-04 at 2 44 23 PM" src="https://github.com/user-attachments/assets/c911fbed-2f53-4212-a741-cfac89ece5d9" />
+<img width="196" alt="Screenshot 2025-04-04 at 2 44 30 PM" src="https://github.com/user-attachments/assets/6c83d2ed-d4cd-4338-b587-0f0a068bf7e2" />
 
 
 
