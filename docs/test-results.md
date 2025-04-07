@@ -4,15 +4,15 @@ The test results show the actual outcome of the testing, following the [Test Pla
 
 ---
 
-Player X and Player Y
+## Player X and Player Y
 
 Player X and Player Y start positions, when starting the program for the maze game.
 
-Starting location
+## Starting location
 
 the test data for this is an integer in this case 0, 0
 
-Expected Test Result
+## Expected Test Result
 
 my expected test result is that the location of 0, 0 which is in the top left of the maze will work and when the application is opened the player will spawn there and will start to when the game starts.
 
@@ -51,13 +51,27 @@ The private gameWon() function that i have made needs to be constanly checking f
 
 the test data is when the X and Y coordinates of the player match up with the X and Y coordinates of the finish line the gameWon() function should detect this and display the winning message.
 
-### Test Result
+## Test Result
 
 <img width="609" alt="Screenshot 2025-04-08 at 9 15 56 AM" src="https://github.com/user-attachments/assets/c6eb40da-cf55-46df-8190-063bc8796d0c" />
 
 
 
 When the player reaches the end block of the maze (finish line) the gameWon() function detects this and displays the message shown in the screenshoot above to congratulate the player on compeleting the maze.
+
+
+---
+
+## Show message introduction message when player clicks button
+
+The private gameWon() function that i have made needs to be constanly checking for when the players X and Y coordinates match up with the X and Y coordinates for the finish block. This allows for the message to show up when the player reaches the finish block.
+
+## If action is performed (boolean)
+
+the test data is when the fun actionPerformed identifies that the player has clicked the introduction button to ask for help and instructions on what to do.
+
+## Test Result
+
 
 
 ---
