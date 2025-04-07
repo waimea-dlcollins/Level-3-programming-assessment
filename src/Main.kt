@@ -28,11 +28,12 @@ import java.awt.*
 import java.awt.event.*
 //imports javax.swing.*
 import javax.swing.*
-import javax.swing.border.Border
+
 
 /**
  * Launch the application
  */
+
 // function for main
 fun main() {
     // sets up FlatDarkLaf
@@ -131,26 +132,39 @@ class MainWindow (private val app: App) : JFrame(), ActionListener {
     private lateinit var currentPosition: JLabel
 
 
-
+// init is used to initialize the properties of the classes
     init {
+        // configureWindow() for configuring the window
         configureWindow()
+    // addControls for adding the controls for the game
         addControls()
+    // setLocationRelativeTo(null) to set the relative location to nothing
         setLocationRelativeTo(null)
+    // isVisible = true to make sure things are visible
         isVisible = true
+    // updateView() to be constanly updating the view
         updateView()
+    // startTimer() to start the timer when the window opens
         startTimer()
     }
-
+// private function that condigures the window the maze game it played in.
     private fun configureWindow() {
+        // titile is "Dylan's Maze"
         title = "Dylan's Maze"
+    // initialize the preferredsize of the window
         contentPane.preferredSize = Dimension(400, 600)
+    // initialize the exit_on_close when the user closes the window so it doesn't stay open.
         defaultCloseOperation = WindowConstants.EXIT_ON_CLOSE
+    // makes it so the window cant be resizable
         isResizable = false
+    // makes the layour of the window borderlayout()
         layout = BorderLayout()
+    // packs everything together
         pack()
     }
-
+// private function that starts the timer built into the program
     private fun startTimer() {
+        //
         gameTimer = Timer(1000) {
             app.seconds++
             timerLabel.text = " ${app.seconds} Current Seconds"
@@ -212,7 +226,7 @@ class MainWindow (private val app: App) : JFrame(), ActionListener {
         rightButton.foreground = Color.BLACK
         rightButton.addActionListener(this)
 
-        instructionsButton = JButton("▶")
+        instructionsButton = JButton("?")
         instructionsButton.font = buttonFont
         instructionsButton.background = Color(0, 0, 255)
         instructionsButton.foreground = Color.BLACK
