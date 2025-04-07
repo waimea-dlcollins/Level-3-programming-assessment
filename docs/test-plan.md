@@ -24,11 +24,11 @@ my expected test result is that the location of 0, 0 which is in the top left of
 
 ---
 
-Moveplayer X and Y
+ ## Moveplayer X and Y
 
 the X and Y need to be changed to move the player around the maze, they need to be checked as well to make sure that the player moves in the right direction when the buttons are clicked.
 
-The X and Y (boolean)
+## The X and Y (boolean)
 
 the test data is a boolean and i want to make sure that every time the player clicks a button that they move in the right direction that the player clicked, as its a boolean the function can either move the player (true) or not be able to move the player (false), the isWalkable function also is a boolean and helps with this.
 
@@ -38,11 +38,11 @@ I am expecting the iswalkable funtion and the movePlayer function to identify if
 
 ---
 
-Show message when player reaches finish
+## Show message when player reaches finish
 
 The private gameWon() function that i have made needs to be constanly checking for when the players X and Y coordinates match up with the X and Y coordinates for the finish block. This allows for the message to show up when the player reaches the finish block.
 
-The X and Y 
+## The X and Y 
 
 the test data is when the X and Y coordinates of the player match up with the X and Y coordinates of the finish line the gameWon() function should detect this and display the winning message.
 
@@ -54,11 +54,11 @@ When the player reaches the end block of the maze (finish line) the gameWon() fu
 
 ---
 
-Show message introduction message when player clicks button
+## Show message introduction message when player clicks button
 
 The private gameWon() function that i have made needs to be constanly checking for when the players X and Y coordinates match up with the X and Y coordinates for the finish block. This allows for the message to show up when the player reaches the finish block.
 
-If action is performed (boolean)
+## If action is performed (boolean)
 
 the test data is when the fun actionPerformed identifies that the player has clicked the introduction button to ask for help and instructions on what to do.
 
