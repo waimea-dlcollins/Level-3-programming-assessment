@@ -1,4 +1,3 @@
-<img width="747" alt="Screenshot 2025-04-08 at 9 45 31 AM" src="https://github.com/user-attachments/assets/90b8d1b1-b66b-4781-8cc6-be3e7a4c48d5" /># Results of Testing
 
 The test results show the actual outcome of the testing, following the [Test Plan](test-plan.md)
 
