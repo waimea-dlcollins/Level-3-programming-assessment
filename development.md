@@ -44,11 +44,28 @@ added the function to update the view of the player every time the player makes 
 
 ---
 
-## Date: xx/xx/20xx
+## Date: 31/3/2025
 
-Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes. Example description and notes.
+added a timer that tracks how long it takes for the player to finish the maze and then tells the elapsed seconds when the player has completed the maze.
 
-![example.png](screenshots/example.png)
+<img width="364" alt="Screenshot 2025-04-08 at 9 03 27 AM" src="https://github.com/user-attachments/assets/03606939-b5ba-4d33-a713-5c426476999a" />
+<img width="402" alt="Screenshot 2025-04-08 at 9 03 21 AM" src="https://github.com/user-attachments/assets/f243a7ad-9d84-442c-9765-b6b01a25e507" />
+<img width="262" alt="Screenshot 2025-04-08 at 9 04 24 AM" src="https://github.com/user-attachments/assets/2c0a9b76-eac9-4e53-8f6c-e30c2c59f729" />
+
+
+
+
+---
+## Date: 31/3/2025
+
+added a Position label that is displayed at the top of the app. I made a headerpanel using val so it isnt changable and it makes sure that the timer is on the left and the current position is on the right.
+
+<img width="553" alt="Screenshot 2025-04-08 at 9 06 07 AM" src="https://github.com/user-attachments/assets/becb0789-07d8-445c-a675-1bdd68c0c812" />
+<img width="419" alt="Screenshot 2025-04-08 at 9 06 16 AM" src="https://github.com/user-attachments/assets/c5fe154b-0a1e-4e64-a44b-79acc68760f6" />
+<img width="621" alt="Screenshot 2025-04-08 at 9 07 03 AM" src="https://github.com/user-attachments/assets/97e7d702-b5d4-4acc-a770-f706bd612acb" />
+
+
+
 
 ---
 
