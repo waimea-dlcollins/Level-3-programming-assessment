@@ -46,7 +46,7 @@ added the function to update the view of the player every time the player makes 
 
 ## Date: 31/3/2025
 
-added a timer that tracks how long it takes for the player to finish the maze and then tells the elapsed seconds when the player has completed the maze.
+added a timer using a private function that tracks how long it takes for the player to finish the maze and then tells the elapsed seconds when the player has completed the maze (reached the finish).
 
 <img width="364" alt="Screenshot 2025-04-08 at 9 03 27 AM" src="https://github.com/user-attachments/assets/03606939-b5ba-4d33-a713-5c426476999a" />
 <img width="402" alt="Screenshot 2025-04-08 at 9 03 21 AM" src="https://github.com/user-attachments/assets/f243a7ad-9d84-442c-9765-b6b01a25e507" />
@@ -58,7 +58,7 @@ added a timer that tracks how long it takes for the player to finish the maze an
 ---
 ## Date: 31/3/2025
 
-added a Position label that is displayed at the top of the app. I made a headerpanel using val so it isnt changable and it makes sure that the timer is on the left and the current position is on the right.
+added a Position label, using a JLabel, that is displayed at the top of the app. Using the BorderLayout.NORTH for the headerPanel allows for both the timer and the current position displayed in X and Y coordinates to be positioned correctly. I made a headerpanel using val so it isnt changable and it makes sure that the timer is on the left and the current position is on the right.
 
 <img width="553" alt="Screenshot 2025-04-08 at 9 06 07 AM" src="https://github.com/user-attachments/assets/becb0789-07d8-445c-a675-1bdd68c0c812" />
 <img width="419" alt="Screenshot 2025-04-08 at 9 06 16 AM" src="https://github.com/user-attachments/assets/c5fe154b-0a1e-4e64-a44b-79acc68760f6" />
