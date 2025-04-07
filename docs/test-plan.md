@@ -51,3 +51,19 @@ the test data is when the X and Y coordinates of the player match up with the X 
 When the player reaches the end block of the maze (finish line) the gameWon() function detects this and displays a message congratulating the player on finsihing the maze successfully.
 
 ---
+
+---
+
+Show message introduction message when player clicks button
+
+The private gameWon() function that i have made needs to be constanly checking for when the players X and Y coordinates match up with the X and Y coordinates for the finish block. This allows for the message to show up when the player reaches the finish block.
+
+If action is performed (boolean)
+
+the test data is when the fun actionPerformed identifies that the player has clicked the introduction button to ask for help and instructions on what to do.
+
+### Expected Test Result
+
+When the player clicks the introduction button a message should appear showing a few sentences on the basic controls and how to complete the maze.
+
+---
