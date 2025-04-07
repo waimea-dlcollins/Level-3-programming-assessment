@@ -42,3 +42,23 @@ The player (red block) moves when i click one of the buttons this shows that the
 
 ---
 
+
+## Show message when player reaches finish
+
+The private gameWon() function that i have made needs to be constanly checking for when the players X and Y coordinates match up with the X and Y coordinates for the finish block. This allows for the message to show up when the player reaches the finish block.
+
+## The X and Y 
+
+the test data is when the X and Y coordinates of the player match up with the X and Y coordinates of the finish line the gameWon() function should detect this and display the winning message.
+
+### Test Result
+
+<img width="609" alt="Screenshot 2025-04-08 at 9 15 56 AM" src="https://github.com/user-attachments/assets/c6eb40da-cf55-46df-8190-063bc8796d0c" />
+
+
+
+When the player reaches the end block of the maze (finish line) the gameWon() function detects this and dispalys the message shown in the screenshoot above to congratulate the player on compeleting the maze.
+
+
+---
+
