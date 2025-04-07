@@ -57,7 +57,7 @@ the test data is when the X and Y coordinates of the player match up with the X 
 
 
 
-When the player reaches the end block of the maze (finish line) the gameWon() function detects this and dispalys the message shown in the screenshoot above to congratulate the player on compeleting the maze.
+When the player reaches the end block of the maze (finish line) the gameWon() function detects this and displays the message shown in the screenshoot above to congratulate the player on compeleting the maze.
 
 
 ---
