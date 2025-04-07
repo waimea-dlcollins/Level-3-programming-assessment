@@ -1,4 +1,4 @@
-# Results of Testing
+<img width="747" alt="Screenshot 2025-04-08 at 9 45 31 AM" src="https://github.com/user-attachments/assets/90b8d1b1-b66b-4781-8cc6-be3e7a4c48d5" /># Results of Testing
 
 The test results show the actual outcome of the testing, following the [Test Plan](test-plan.md)
 
@@ -71,6 +71,11 @@ The private gameWon() function that i have made needs to be constanly checking f
 the test data is when the fun actionPerformed identifies that the player has clicked the introduction button to ask for help and instructions on what to do.
 
 ## Test Result
+
+<img width="104" alt="Screenshot 2025-04-08 at 9 45 28 AM" src="https://github.com/user-attachments/assets/d597a1a3-4e6d-415b-bfef-e68eddd07dcb" />
+<img width="747" alt="Screenshot 2025-04-08 at 9 45 31 AM" src="https://github.com/user-attachments/assets/2e132e00-eb00-4cf7-bfc3-e463e3d0bcdc" />
+
+when the button shown in the screenshot above is clicked the message is shown that allows the user to understand the basics of the game which which will allow them to play the game effectively.
 
 
 
