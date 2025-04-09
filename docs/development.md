@@ -29,6 +29,7 @@ added all of the necessary functions to allow the user to play the game without 
 ## Date: 28/3/2025
 
 added of the private lateinit var's for the buttons for the maze game in the mainWindow class, and also added all of the buttons to the control panel using the  controlPanel.add() command, then added all of the code for the buttons and made sure they stay at the bottom of the window by using the  add(controlPanel, BorderLayout.SOUTH) command.
+
 <img width="514" alt="Screenshot 2025-04-01 at 9 07 21 AM" src="https://github.com/user-attachments/assets/b23fe73e-de9c-4f0f-88a1-9556fa0bd520" />
 <img width="373" alt="Screenshot 2025-04-01 at 9 07 29 AM" src="https://github.com/user-attachments/assets/52dbd55a-4c3e-46e7-8fad-8f3c0adab11a" />
 
@@ -50,7 +51,7 @@ added a timer using a private function that tracks how long it takes for the pla
 
 <img width="364" alt="Screenshot 2025-04-08 at 9 03 27 AM" src="https://github.com/user-attachments/assets/03606939-b5ba-4d33-a713-5c426476999a" />
 <img width="402" alt="Screenshot 2025-04-08 at 9 03 21 AM" src="https://github.com/user-attachments/assets/f243a7ad-9d84-442c-9765-b6b01a25e507" />
-<img width="262" alt="Screenshot 2025-04-08 at 9 04 24 AM" src="https://github.com/user-attachments/assets/2c0a9b76-eac9-4e53-8f6c-e30c2c59f729" />
+<img width="262" alt="Screenshot 2025-04-08 at 9 04 24 AM" src="httconsps://github.com/user-attachments/assets/2c0a9b76-eac9-4e53-8f6c-e30c2c59f729" />
 
 
 
