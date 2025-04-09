@@ -79,6 +79,7 @@ class App {
         // ListOf 0's and 1's that display the maze
         listOf(0, 0, 0, 1, 0, 0, 0)
     )
+
     // a private function that checks if the next X and Y coordinate is avaiable for the player to move to, it either returns a true or a false
     private fun isWalkable(x: Int, y: Int): Boolean {
     // checks if the coordinates given ( X and Y) and withing the bounds of the maze layout and whether the corresponding cell is available
@@ -164,100 +165,155 @@ class MainWindow (private val app: App) : JFrame(), ActionListener {
     }
 // private function that starts the timer built into the program
     private fun startTimer() {
-        //
+        // "game timer" that has a delay of 1000 milliseconds so it chnages every second
         gameTimer = Timer(1000) {
+            // adds seconds to the app
             app.seconds++
+            // "timerLabel.text" gets the current seconds from the app and then displays them
             timerLabel.text = " ${app.seconds} Current Seconds"
         }
+    // tells the game timer to start
         gameTimer.start()
     }
-
+    // private function for adding the controls of the game
     private fun addControls() {
+        // a val for the button font
         val buttonFont = Font(Font.SANS_SERIF, Font.BOLD, 40)
+    // a val for the timer font
         val timerFont = Font(Font.SANS_SERIF, Font.BOLD, 20)
+    // a val for the currentposition font
         val currentPositionFont = Font(Font.SANS_SERIF, Font.BOLD, 20)
 
-
+    // val for the headerPanel, headerPanel is a JPanel, and it has a borderlayout()
         val headerPanel = JPanel (BorderLayout())
+    // the layout for the headerPanel "BorderLayout"
         headerPanel.layout = BorderLayout()
-
+    // the timer label, displayed using a JLabel, shows the current seconds and has SwingConstants of left
         timerLabel = JLabel ("0 Current Seconds", SwingConstants.LEFT)
+    // the font of the timerlabel
         timerLabel.font = timerFont
+    // adds the timer label to the headerPanel with the BorderLayout.WEST
         headerPanel.add(timerLabel, BorderLayout.WEST)
-
+    // the currentposition label that uses JLabel, shows the current position of the player in X and Y coordinates, and has SwingConstants.RIGHT
         currentPosition = JLabel("Position: (${app.playerX}, ${app.playerX})", SwingConstants.RIGHT)
+    //  adds the currentposition font to the currentposition
         currentPosition.font = currentPositionFont
+    // adds the currentposition to the headerPanel with the borderlayout.east
         headerPanel.add(currentPosition, BorderLayout.EAST)
-
+    // initiates mazePanel, is a JPanel()
         mazePanel = JPanel()
+    // initiates the layour of the mazeHeight and the mazeWidth, using a grid layout
         mazePanel.layout = GridLayout(app.mazeHeight, app.mazeWidth)
+    // adds the mazepanel to the borderlayout.center
         add(mazePanel, BorderLayout.CENTER)
-
-
+    // adds headerpanel to the borderlayout.north
         add(headerPanel, BorderLayout.NORTH)
-
+    // val that initiates the control, using JPanel
         val controlPanel = JPanel()
+    // makes the control lauout a Flowlayout so it isn't in a fixed position
         controlPanel.layout = FlowLayout()
 
         //----------------------------------------------------------------------------------------
         //----------------------------------------------------------------------------------------
-
+    // initiates up button using JButton, displays "↑"
         upButton = JButton("↑")
+    // makes the font of the upbutton buttonfont
         upButton.font = buttonFont
+    // sets the up button background color to blue
         upButton.background = Color(0, 0, 255)
+    // sets the upbutton foreground to black
         upButton.foreground = Color.BLACK
+    // adds the  ActionListener "this" to the upbutton
         upButton.addActionListener(this)
 
+    // initiates down button using JButton, displays "↓"
         downButton = JButton("↓")
+    // makes the font of the down button buttonfont
         downButton.font = buttonFont
+    // sets the background color of the downbutton to blue
         downButton.background = Color(0, 0, 255)
+    // sets the downbutton foreground color to BLACK
         downButton.foreground = Color.BLACK
+    // adds the ActionListener "this" to the downbutton
         downButton.addActionListener(this)
 
+    // initiates leftbutton using JButton, displays "←"
         leftButton = JButton("←")
+    // makes the font of the left button the left button font
         leftButton.font = buttonFont
+    // makes the background color of the leftbutton to blue
         leftButton.background = Color(0, 0, 255)
+    // makes the foreground color of the leftbutton to BLACK
         leftButton.foreground = Color.BLACK
+    // adds the ActionListener "this" to the leftbutton
         leftButton.addActionListener(this)
 
+    // initiates rightbutton using JButton, displays "→"
         rightButton = JButton("→")
+    // makes the font of the righbutton button font
         rightButton.font = buttonFont
+    // makes the background color of the rightbutton blue
         rightButton.background = Color(0, 0, 255)
+    // makes the color of the rightbutton foreground to BLACK
         rightButton.foreground = Color.BLACK
+    // adds the ActionListener "this" to the rightbutton
         rightButton.addActionListener(this)
 
+    // initiates instructionsButton using JButton, displays "?"
         instructionsButton = JButton("?")
+    // makes the font of instructionsButton button font
         instructionsButton.font = buttonFont
+    // makes the background color of instructionsButton to blue
         instructionsButton.background = Color(0, 0, 255)
+    // makes the foreground color of the instructionsButton to black
         instructionsButton.foreground = Color.BLACK
+    // adds the ActionListener "this" to the instructionsButton
         instructionsButton.addActionListener(this)
 
+    // adds the upbuttonn to the control panel
         controlPanel.add(upButton)
+    // adds the down button to the control panel
         controlPanel.add(downButton)
+    // adds the left button to the control panel
         controlPanel.add(leftButton)
+    // adds the righbutton to the control panel
         controlPanel.add(rightButton)
+    // adds the instructionsButton to the control panel
         controlPanel.add(instructionsButton)
-
+    // makes the borderlayout of the control panel to south
         add(controlPanel, BorderLayout.SOUTH)
     }
-
+    // private function that updates the view of the game constantly
     private fun updateView() {
+    // removes all the previous panels before adding the new ones
         mazePanel.removeAll()
-
+    // for loop that keeps going until the maximum height of the maze is reached
         for (y in 0 until app.mazeHeight) {
+    // for loop that keeps going until the maximum width of the maze is reached
             for (x in 0 until app.mazeWidth) {
-                val cellPanel = JPanel()
+    // val that initiates the playerpanel, using JPanel
+                val playerpanel = JPanel()
+    // val that initiates the finish panel, using JPanel
+                val finishpanel = JPanel()
+    // val that initiates the wall panel, using JPanel
+                val wallpanel = JPanel()
+    // val that initiates the walkablepanel, using JPanel
+                val walkablepanel = JPanel()
+    // if statement that is constanly checking the X and Y coordinates of the player
                 if (x == app.playerX && y == app.playerY) {
-                    cellPanel.background = Color.RED
+    // makes the cell panel background color red (the player)
+                    playerpanel.background = Color.RED
+    // else if that is checking for the exit Y and exit X coordinates for when the player reaches the finish
                 } else if (x == app.exitX && y == app.exitY) {
-                    cellPanel.background = Color(0, 0, 255)
+    // makes the finish line
+                    finishpanel.background = Color(0, 0, 255)
                 } else if (app.maze[y][x] == 1) {
-                    cellPanel.background = Color.BLACK
+                    wallpanel.background = Color.BLACK
                 } else {
-                    cellPanel.background = Color.WHITE
+                    walkablepanel.background = Color.WHITE
                 }
-                cellPanel.preferredSize = Dimension(50, 50)
-                mazePanel.add(cellPanel)
+                playerpanel.preferredSize = Dimension(50, 50)
+                mazePanel.add(playerpanel)
             }
         }
 
