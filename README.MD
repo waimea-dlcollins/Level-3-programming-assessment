@@ -1,4 +1,4 @@
-# Dylan's maze 
+## Dylan's maze 
 
 by Dylan Collins
 
@@ -23,6 +23,6 @@ The project is written in the [Kotlin](https://kotlinlang.org) programming langu
 ---
 
 ## Project Description
-This maze game challenges the user to find their way through the maze while being timed throughout their journey whilst constantly showing the players exact location in X and Y coordinates.
+This maze game challenges the user to find their way through the maze while being timed throughout their journey whilst constantly showing the players exact location in X and Y coordinates. The player also can only see the blocks around them in a one block radius making the game significantly harder for the player to complete.
 ****
 
