@@ -14,7 +14,8 @@
 
 /* This program challenges the user to find their way throughout the maze,
  while being timed throughout their journey,
- whilst constantly showing the players exact location in X and Y coordinates. The player
+ whilst constantly showing the players exact location in X and Y coordinates. The player also only has a visivility of 1
+ which makes the game signficantly harder for the player to navigate the maze and find the finish. The player
  can challenge themselves to get a new high score with the built-in timer and can also
  click the infomation button in the bottom right of the app to find out how to play.
  */
@@ -28,6 +29,8 @@ import java.awt.*
 import java.awt.event.*
 //imports javax.swing.*
 import javax.swing.*
+// imports kotlin.math.abs
+import kotlin.math.abs
 
 
 /**
@@ -59,6 +62,8 @@ class App {
     val exitX = mazeWidth - 1
     // val that contains the Exit Y coordinate which is - 8
     val exitY = mazeHeight - 8
+    // val that contains the distance of visibility the player can see
+    val playerVisibility = 1
 
     // val which contains a List<List<Int>> = listOf() which displays the layout of the maze, all the 0's are free spaces that are walkable and the 1's are walls that stop the player from continuing.
     val maze: List<List<Int>> = listOf(
@@ -69,7 +74,7 @@ class App {
         // ListOf 0's and 1's that display the maze
         listOf(0, 1, 0, 1, 0, 1, 0),
         // ListOf 0's and 1's that display the maze
-        listOf(0, 1, 0, 1, 0, 1, 0),
+        listOf(0, 1, 0 , 1, 0, 1, 0),
         // ListOf 0's and 1's that display the maze
         listOf(0, 1, 0, 1, 0, 1, 0),
         // ListOf 0's and 1's that display the maze
@@ -133,7 +138,7 @@ class MainWindow (private val app: App) : JFrame(), ActionListener {
     private lateinit var currentPosition: JLabel
 
 
-// init is used to initialize the properties of the classes
+    // init is used to initialize the properties of the classes
     init {
         // configureWindow() for configuring the window
         configureWindow()
@@ -291,35 +296,50 @@ class MainWindow (private val app: App) : JFrame(), ActionListener {
         for (y in 0 until app.mazeHeight) {
     // for loop that keeps going until the maximum width of the maze is reached
             for (x in 0 until app.mazeWidth) {
-    // val that initiates the playerpanel, using JPanel
-                val playerpanel = JPanel()
-    // val that initiates the finish panel, using JPanel
-                val finishpanel = JPanel()
-    // val that initiates the wall panel, using JPanel
-                val wallpanel = JPanel()
-    // val that initiates the walkablepanel, using JPanel
-                val walkablepanel = JPanel()
-    // if statement that is constanly checking the X and Y coordinates of the player
-                if (x == app.playerX && y == app.playerY) {
-    // makes the cell panel background color red (the player)
-                    playerpanel.background = Color.RED
-    // else if that is checking for the exit Y and exit X coordinates for when the player reaches the finish
-                } else if (x == app.exitX && y == app.exitY) {
-    // makes the finish line
-                    finishpanel.background = Color(0, 0, 255)
-                } else if (app.maze[y][x] == 1) {
-                    wallpanel.background = Color.BLACK
-                } else {
-                    walkablepanel.background = Color.WHITE
-                }
-                playerpanel.preferredSize = Dimension(50, 50)
-                mazePanel.add(playerpanel)
+                // val that initiates the playerpanel, using JPanel
+                val jPanel = JPanel()
+                // val the initiates the ispanelVisble, using JPanel
+                val ispanelVisble =
+                    // abs is used to be able to calcuate the absolute value of the expression x and y of the player,
+                    // the app stores the playerX and the playerY and the playerVisibility which is set to 1
+                    abs(x - app.playerX ) + abs( y- app.playerY) <= app.playerVisibility
+                // if the panel is visible the code runs if no the last else runs and makes the tiles black unless they,
+                // are in the raidus of the player's visibility of 1
+                if (ispanelVisble)
+                // if statement that is constanly checking the X and Y coordinates of the player using
+                    if (x == app.playerX && y == app.playerY) {
+                        // makes the cell panel background color red (the player)
+                        jPanel.background = Color.RED
+                        // else if that is checking for the exit Y and exit X coordinates for when the player reaches the finish
+                    } else if (x == app.exitX && y == app.exitY) {
+                        // makes the background for the finish line the color blue
+                        jPanel.background = Color(0, 0, 255)
+                        // else if that identifies 1's as walls
+                    } else if (app.maze[y][x] == 1) {
+                        // colors them black so the player can identify if the panel is a wall or a walkable panel
+                        jPanel.background = Color.BLACK
+                        // else that makes all the panels that aren't the finish line or a wall walkable panels by coloring,
+                        // them white, so the player can identify that they are walkable
+                    } else {
+                        // colors the background of the walkable panels white
+                        jPanel.background = Color.WHITE
+                        // else that is in charge of making the walkable panels that aren't in the visibility raidus of the player black,
+                        // so that the player can see them
+                    } else {
+                        // colors these walkable panels that aren't in the visibility radius of the player to the color black so that they,
+                        // cant be seen
+                    jPanel.background = Color.BLACK
+            }
+                // makes the jPanel preferredsize to the dimensions of 50 for width and 50 for height
+                jPanel.preferredSize = Dimension(50, 50)
+                // adds jPanel to the mazePanel
+                mazePanel.add(jPanel)
             }
         }
-
+        // displays the current position of the player in X and Y coordinates so the player can see where they are, displayed in text
         currentPosition.text = "Position: (X${app.playerX}, Y${app.playerY}) "
 
-
+        // revalidates the mazepanel
         mazePanel.revalidate()
         mazePanel.repaint()
     }
