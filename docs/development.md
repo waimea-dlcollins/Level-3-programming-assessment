@@ -70,4 +70,21 @@ added a Position label, using a JLabel, that is displayed at the top of the app.
 
 ---
 
+---
+## Date: 11/4/2025
+
+added a val that is initiated with the ispanelVisible. this allows my program to make any of the blocks that arent in a one block raidus of the player to be black and not be seen by the player unti the player has reached them. I havent made it so the player can see all blocks that have discovered but making it so they only see the block near them in a one block radius it makes it a lot harder for the player to compelte the maze. I made the color of it black so it cant be seen by the player and i have made the visibility raidus of the player 1.
+
+
+<img width="263" alt="Screenshot 2025-04-11 at 2 29 15 PM" src="https://github.com/user-attachments/assets/cf445137-b1e7-41c3-8c4c-33eb481e2fa0" />
+<img width="679" alt="Screenshot 2025-04-11 at 2 29 27 PM" src="https://github.com/user-attachments/assets/842fae9a-c91e-40b0-aaf7-0e01b3752737" />
+<img width="345" alt="Screenshot 2025-04-11 at 2 29 31 PM" src="https://github.com/user-attachments/assets/8a567998-b727-4cb1-9d9f-7f7ccfc7fddf" />
+<img width="762" alt="Screenshot 2025-04-11 at 2 35 06 PM" src="https://github.com/user-attachments/assets/a79b5a51-0658-4345-bfd0-4c7241e1c6bd" />
+
+
+
+
+
+---
+
 
