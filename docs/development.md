@@ -51,7 +51,9 @@ added a timer using a private function that tracks how long it takes for the pla
 
 <img width="364" alt="Screenshot 2025-04-08 at 9 03 27 AM" src="https://github.com/user-attachments/assets/03606939-b5ba-4d33-a713-5c426476999a" />
 <img width="402" alt="Screenshot 2025-04-08 at 9 03 21 AM" src="https://github.com/user-attachments/assets/f243a7ad-9d84-442c-9765-b6b01a25e507" />
-<img width="262" alt="Screenshot 2025-04-08 at 9 04 24 AM" src="httconsps://github.com/user-attachments/assets/2c0a9b76-eac9-4e53-8f6c-e30c2c59f729" />
+<img width="612" alt="Screenshot 2025-04-11 at 2 37 07 PM" src="https://github.com/user-attachments/assets/dcc584fe-609d-4241-98d9-e9c6d53cdbc5" />
+<img width="366" alt="Screenshot 2025-04-11 at 2 36 39 PM" src="https://github.com/user-attachments/assets/09fb6608-36a6-4837-9396-731afd40ac02" />
+<img width="762" alt="Screenshot 2025-04-11 at 2 35 06 PM" src="https://github.com/user-attachments/assets/3a73c1fe-f77d-4873-905e-51243aa3dea3" />
 
 
 
