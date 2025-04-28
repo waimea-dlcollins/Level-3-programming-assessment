@@ -33,6 +33,8 @@ import javax.swing.*
 import kotlin.math.abs
 
 
+
+
 /**
  * Launch the application
  */
@@ -64,6 +66,8 @@ class App {
     val exitY = mazeHeight - 8
     // val that contains the distance of visibility the player can see
     val playerVisibility = 1
+
+
 
     // val which contains a List<List<Int>> = listOf() which displays the layout of the maze, all the 0's are free spaces that are walkable and the 1's are walls that stop the player from continuing.
     val maze: List<List<Int>> = listOf(
@@ -115,7 +119,9 @@ class App {
         // displays the message using JOptionPane.showMessageDialog also has a parentComponent of "null"
         JOptionPane.showMessageDialog(null, "You finished the maze in $seconds seconds.")
     }
+
 }
+
 // initiates the MainWindow class, has parmarters of app which is a private val, Has a JFrame and has a ActionListener
 class MainWindow (private val app: App) : JFrame(), ActionListener {
     // a private lateinit var for the instructionsButton which uses JButton
@@ -334,6 +340,7 @@ class MainWindow (private val app: App) : JFrame(), ActionListener {
                 jPanel.preferredSize = Dimension(50, 50)
                 // adds jPanel to the mazePanel
                 mazePanel.add(jPanel)
+
             }
         }
         // displays the current position of the player in X and Y coordinates so the player can see where they are, displayed in text
@@ -341,8 +348,10 @@ class MainWindow (private val app: App) : JFrame(), ActionListener {
 
         // revalidates the mazepanel
         mazePanel.revalidate()
+        // repaints the mazepanel
         mazePanel.repaint()
     }
+
 
     override fun actionPerformed(e: ActionEvent?) {
         when (e?.source) {
