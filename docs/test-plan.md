@@ -1,7 +1,8 @@
 # Plan for Testing the Program
 
-The test plan lays out the actions and data I will use to test the functionality of my program.
-
+My test plan will consist of the player x and y starting positions, the x and y when trying to move the player across the map. Showing a message when the user makes it,
+to the end of the maze (the finsih block). finally to show the introduction button when the user clicks it so they can understand what is happening and how they can beat the maze,
+efficiently and effectively.
 Terminology:
 
 - **VALID** data values are those that the program expects
